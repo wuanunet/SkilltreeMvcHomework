@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkilltreeMvcHomework", "SkilltreeMvcHomework\SkilltreeMvcHomework.csproj", "{65A8AD69-3DF7-4CAE-AC08-F27097631F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkilltreeMvcHomework.Tests", "SkilltreeMvcHomework.Tests\SkilltreeMvcHomework.Tests.csproj", "{52ACEE4D-CD26-406E-B767-8B05E11C3D87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65A8AD69-3DF7-4CAE-AC08-F27097631F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A8AD69-3DF7-4CAE-AC08-F27097631F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A8AD69-3DF7-4CAE-AC08-F27097631F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A8AD69-3DF7-4CAE-AC08-F27097631F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52ACEE4D-CD26-406E-B767-8B05E11C3D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52ACEE4D-CD26-406E-B767-8B05E11C3D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52ACEE4D-CD26-406E-B767-8B05E11C3D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52ACEE4D-CD26-406E-B767-8B05E11C3D87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 609d0a20-073a-4b0e-9daa-05ce72fc4f36
+	EndGlobalSection
+EndGlobal
