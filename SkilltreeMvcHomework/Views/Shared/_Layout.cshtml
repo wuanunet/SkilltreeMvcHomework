@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的記帳本</title>
-    <!--@Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")-->
     <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -22,9 +20,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+                    <li><a href="/">首頁</a>
+                    <li><a href="@Url.Action("Manage", "Accounting")">記帳本</a>
                 </ul>
             </div>
         </div>
@@ -37,8 +34,6 @@
         </footer>
     </div>
 
-    <!--@Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")-->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"></script>
 </body>
