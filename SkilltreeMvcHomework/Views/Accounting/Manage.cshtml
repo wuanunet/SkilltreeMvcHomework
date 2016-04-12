@@ -10,7 +10,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>記帳本</h4>
+            <h3>記帳本</h3>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -48,9 +48,11 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-sm-10">
-                    <input type="submit" value="儲存" class="btn btn-default" />
+                    <input type="submit" value="送出" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
 </div>
+
+@Html.Action("History")
