@@ -9,8 +9,9 @@ namespace SkilltreeMvcHomework.ViewModels
         public AccountingTypeEnum Type { get; set; }
 
         [Required]
+        [UIHint("Decimal")]
         [Display(Name = "金額")]
-        public int Cost { get; set; }
+        public decimal Cost { get; set; }
 
         [Display(Name = "備註")]
         public string Remark { get; set; }
