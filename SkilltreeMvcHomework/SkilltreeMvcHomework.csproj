@@ -167,6 +167,7 @@
     <Content Include="Views\Accounting\Manage.cshtml" />
     <Content Include="Views\Accounting\History.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Decimal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
