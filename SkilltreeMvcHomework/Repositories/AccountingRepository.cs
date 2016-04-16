@@ -7,6 +7,12 @@ namespace SkilltreeMvcHomework.Repositories
     {
         private SkillTreeHomeworkDBEntities dbContext = new SkillTreeHomeworkDBEntities();
 
+        public void Create(AccountBook instance)
+        {
+            dbContext.AccountBook.Add(instance);
+            dbContext.SaveChanges();
+        }
+
         public IQueryable<AccountBook> GetAll()
         {
             var result = dbContext.AccountBook;

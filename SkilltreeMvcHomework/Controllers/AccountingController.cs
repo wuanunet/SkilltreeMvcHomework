@@ -28,7 +28,7 @@ namespace SkilltreeMvcHomework.Controllers
                 return View(pageData);
             }
 
-            //// _accountingList.Add(pageData);
+            var result = this._accountingService.Create(pageData);
 
             return RedirectToAction("Manage");
         }

@@ -5,6 +5,8 @@ namespace SkilltreeMvcHomework.Repositories
 {
     public interface IAccountingRepository
     {
+        void Create(AccountBook instance);
+
         IQueryable<AccountBook> GetAll();
     }
 }

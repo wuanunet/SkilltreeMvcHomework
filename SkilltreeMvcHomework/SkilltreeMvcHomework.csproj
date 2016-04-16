@@ -160,6 +160,8 @@
     <Compile Include="Services\IAccountingService.cs" />
     <Compile Include="ViewModels\AccountingViewModel.cs" />
     <Compile Include="ViewModels\AccountingTypeEnum.cs" />
+    <Compile Include="ViewModels\IResult.cs" />
+    <Compile Include="ViewModels\Result.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SkillTreeHomeworkDB.mdf" />
