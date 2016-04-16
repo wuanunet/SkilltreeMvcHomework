@@ -5,6 +5,14 @@
     var count = 1;
 }
 
+<style>
+    .AutoSkip {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
 <h3>歷史紀錄</h3>
 
 <div class="row">
@@ -12,14 +20,17 @@
         <table class="table table-bordered table-hover">
             <tr>
                 <th>#</th>
-                <th>
+                <th style="width: 15%;">
+                    @Html.DisplayNameFor(model => model.CreateTime)
+                </th>
+                <th style="width: 10%;">
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th style="width: 10%;">
                     @Html.DisplayNameFor(model => model.Cost)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Remark)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CreateTime)
                 </th>
             </tr>
 
@@ -29,14 +40,20 @@
                     <td>
                         @count
                     </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Cost)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Remark)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreateTime)
+                        <div class="AutoSkip" style='width:600px;'>
+                            @Html.DisplayFor(modelItem => item.Remark)
+                        </div>
                     </td>
                 </tr>
                 count++;
