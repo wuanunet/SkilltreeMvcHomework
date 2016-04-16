@@ -130,6 +130,10 @@
     <Compile Include="ViewModels\AccountingTypeEnum.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SkillTreeHomeworkDB.mdf" />
+    <Content Include="App_Data\SkillTreeHomeworkDB_log.ldf">
+      <DependentUpon>SkillTreeHomeworkDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -170,7 +174,6 @@
     <Content Include="Views\Shared\DisplayTemplates\Decimal.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
