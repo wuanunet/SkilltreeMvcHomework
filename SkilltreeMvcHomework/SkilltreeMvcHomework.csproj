@@ -154,6 +154,10 @@
       <DependentUpon>HomeworkDbModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AccountingRepository.cs" />
+    <Compile Include="Repositories\IAccountingRepository.cs" />
+    <Compile Include="Services\AccountingService.cs" />
+    <Compile Include="Services\IAccountingService.cs" />
     <Compile Include="ViewModels\AccountingViewModel.cs" />
     <Compile Include="ViewModels\AccountingTypeEnum.cs" />
   </ItemGroup>
