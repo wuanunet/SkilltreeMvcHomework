@@ -1,4 +1,5 @@
-﻿using SkilltreeMvcHomework.ViewModels;
+﻿using SkilltreeMvcHomework.Services;
+using SkilltreeMvcHomework.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -7,7 +8,12 @@ namespace SkilltreeMvcHomework.Controllers
 {
     public class AccountingController : Controller
     {
-        private static List<AccountingViewModel> _accountingList = GetAccountingList();
+        private IAccountingService _accountingService;
+
+        public AccountingController()
+        {
+            this._accountingService = new AccountingService();
+        }
 
         public ActionResult Manage()
         {
@@ -22,7 +28,7 @@ namespace SkilltreeMvcHomework.Controllers
                 return View(pageData);
             }
 
-            _accountingList.Add(pageData);
+            //// _accountingList.Add(pageData);
 
             return RedirectToAction("Manage");
         }
@@ -30,21 +36,9 @@ namespace SkilltreeMvcHomework.Controllers
         [ChildActionOnly]
         public ActionResult History()
         {
-            var result = _accountingList;
+            var result = this._accountingService.GetData();
 
             return View(result);
-        }
-
-        private static List<AccountingViewModel> GetAccountingList()
-        {
-            var result = new List<AccountingViewModel>
-            {
-                new AccountingViewModel { Type = AccountingTypeEnum.Income, Cost = 30000, Remark = "薪資收入", CreateTime = new DateTime (2016, 04, 01) },
-                new AccountingViewModel { Type = AccountingTypeEnum.Expend, Cost = 8000, Remark = "房租", CreateTime = new DateTime (2016, 04, 05) },
-                new AccountingViewModel { Type = AccountingTypeEnum.Income, Cost = 200, Remark = "統一發票中獎", CreateTime = new DateTime (2016, 04, 05) },
-            };
-
-            return result;
         }
     }
 }
