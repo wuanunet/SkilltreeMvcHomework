@@ -9,11 +9,11 @@ namespace SkilltreeMvcHomework.Services
 {
     public class AccountingService : IAccountingService
     {
-        private IAccountingRepository _accountingRepository;
+        private readonly IAccountingRepository _accountingRepository;
 
-        public AccountingService()
+        public AccountingService(IAccountingRepository accountingRepository)
         {
-            this._accountingRepository = new AccountingRepository();
+            this._accountingRepository = accountingRepository;
         }
 
         public IResult Create(AccountingViewModel pageData)

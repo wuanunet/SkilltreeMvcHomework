@@ -1,18 +1,16 @@
 ﻿using SkilltreeMvcHomework.Services;
 using SkilltreeMvcHomework.ViewModels;
-using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace SkilltreeMvcHomework.Controllers
 {
     public class AccountingController : Controller
     {
-        private IAccountingService _accountingService;
+        private readonly IAccountingService _accountingService;
 
-        public AccountingController()
+        public AccountingController(IAccountingService accountingService)
         {
-            this._accountingService = new AccountingService();
+            this._accountingService = accountingService;
         }
 
         public ActionResult Manage()
