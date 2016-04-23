@@ -135,24 +135,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountBook.cs">
-      <DependentUpon>HomeworkDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HomeworkDbModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HomeworkDbModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HomeworkDbModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HomeworkDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HomeworkDbModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HomeworkDbModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\AccountBook.cs" />
+    <Compile Include="Models\HomeworkDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountingRepository.cs" />
     <Compile Include="Repositories\IAccountingRepository.cs" />
@@ -174,25 +158,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\HomeworkDbModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HomeworkDbModel.edmx</DependentUpon>
-      <LastGenOutput>HomeworkDbModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\HomeworkDbModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HomeworkDbModel.edmx</DependentUpon>
-      <LastGenOutput>HomeworkDbModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\HomeworkDbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HomeworkDbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\HomeworkDbModel.edmx.diagram">
-      <DependentUpon>HomeworkDbModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

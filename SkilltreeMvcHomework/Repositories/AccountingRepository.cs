@@ -5,7 +5,7 @@ namespace SkilltreeMvcHomework.Repositories
 {
     public class AccountingRepository : IAccountingRepository
     {
-        private SkillTreeHomeworkDBEntities dbContext = new SkillTreeHomeworkDBEntities();
+        private HomeworkDbContext dbContext = new HomeworkDbContext();
 
         public void Create(AccountBook instance)
         {
