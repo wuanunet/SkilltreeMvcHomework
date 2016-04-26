@@ -5,6 +5,7 @@ namespace SkilltreeMvcHomework.ViewModels
 {
     public class AccountingViewModel
     {
+        [Required]
         [Display(Name = "類別")]
         public AccountingTypeEnum Type { get; set; }
 
@@ -13,6 +14,7 @@ namespace SkilltreeMvcHomework.ViewModels
         [Display(Name = "金額")]
         public decimal Cost { get; set; }
 
+        [Required]
         [Display(Name = "備註")]
         public string Remark { get; set; }
 
