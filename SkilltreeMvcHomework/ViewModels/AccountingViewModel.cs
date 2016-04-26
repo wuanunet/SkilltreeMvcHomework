@@ -12,6 +12,7 @@ namespace SkilltreeMvcHomework.ViewModels
         [Required]
         [UIHint("Decimal")]
         [Display(Name = "金額")]
+        [Range(0, int.MaxValue, ErrorMessage = "只能輸入正整數")]
         public decimal Cost { get; set; }
 
         [Required]
