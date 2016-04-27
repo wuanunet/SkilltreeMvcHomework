@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkilltreeMvcHomework.Attributes;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SkilltreeMvcHomework.ViewModels
@@ -22,6 +23,7 @@ namespace SkilltreeMvcHomework.ViewModels
         [Required]
         [UIHint("DateTime")]
         [Display(Name = "日期")]
+        [DateTimeRange(ErrorMessage = "記帳時間不能超過今天")]
         public DateTime CreateTime { get; set; }
     }
 }
