@@ -18,6 +18,8 @@ namespace SkilltreeMvcHomework.ViewModels
 
         [Required]
         [Display(Name = "備註")]
+        [DataType(DataType.MultilineText)]
+        [RegularExpression(@"^[\s\S]{0,100}$", ErrorMessage = "不能超過 100 的字")]
         public string Remark { get; set; }
 
         [Required]

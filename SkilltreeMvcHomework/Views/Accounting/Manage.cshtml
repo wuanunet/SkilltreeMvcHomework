@@ -18,7 +18,7 @@
                 @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-sm-2" })
                 <div class="col-sm-10">
                     @Html.EnumDropDownListFor(model => model.Type, "請選擇", new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Type)
+                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -41,7 +41,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-sm-2" })
                 <div class="col-sm-10">
-                    <textarea class="form-control" name="Remark"></textarea>
+                    @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control", placeholder = "請輸入備註，但留意字數限制" } })
+                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -55,3 +56,7 @@
 </div>
 
 @Html.Action("History")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
