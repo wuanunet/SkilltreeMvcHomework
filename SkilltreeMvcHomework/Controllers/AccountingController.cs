@@ -28,7 +28,9 @@ namespace SkilltreeMvcHomework.Controllers
 
             var result = this._accountingService.Create(pageData);
 
-            return RedirectToAction("Manage");
+            var data = this._accountingService.GetData();
+
+            return PartialView("History", data);
         }
 
         [ChildActionOnly]
