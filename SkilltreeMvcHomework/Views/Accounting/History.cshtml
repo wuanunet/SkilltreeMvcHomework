@@ -1,4 +1,6 @@
-﻿@model IEnumerable<SkilltreeMvcHomework.ViewModels.AccountingViewModel>
+﻿@using SkilltreeMvcHomework.Extensions
+@using SkilltreeMvcHomework.ViewModels
+@model IEnumerable<AccountingViewModel>
 
 @{
     Layout = null;
@@ -45,7 +47,7 @@
                         @Html.DisplayFor(modelItem => item.CreateTime)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Type)
+                        @Highlight(@item.Type)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Cost)
@@ -61,3 +63,9 @@
         </table>
     </div>
 </div>
+
+@helper Highlight(AccountingTypeEnum type)
+{
+var textStle = AccountingTypeEnum.Income == type ? "text-info" : "text-danger";
+    <span class="@textStle">@type.GetDisplayName()</span>
+}

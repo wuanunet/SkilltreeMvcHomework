@@ -142,6 +142,7 @@
     <Compile Include="Attributes\DateTimeRangeAttribute.cs" />
     <Compile Include="Controllers\AccountingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
