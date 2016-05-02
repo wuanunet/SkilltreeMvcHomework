@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\DateTimeRangeAttribute.cs" />
     <Compile Include="Controllers\AccountingController.cs" />
+    <Compile Include="Controllers\FeedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="CustomActionResults\RssActionResult.cs" />
     <Compile Include="Extensions\EnumExtension.cs" />
@@ -209,7 +210,9 @@
     <Content Include="Views\Shared\DisplayTemplates\Decimal.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Feed\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
