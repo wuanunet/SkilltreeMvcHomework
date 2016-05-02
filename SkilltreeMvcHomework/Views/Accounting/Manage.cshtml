@@ -67,4 +67,14 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script>
+        $(function () {
+            $("[data-datetimepicker]").datetimepicker({
+                closeOnDateSelect: true,
+                format: 'Y-m-d H:i',
+                maxDate: 0
+            });
+        });
+    </script>
 }
