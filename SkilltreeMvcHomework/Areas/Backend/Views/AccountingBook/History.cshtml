@@ -1,0 +1,71 @@
+﻿@using SkilltreeMvcHomework.Extensions
+@using SkilltreeMvcHomework.ViewModels
+@model IEnumerable<AccountingViewModel>
+
+@{
+    Layout = null;
+    var count = 1;
+}
+
+<style>
+    .AutoSkip {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
+<h3>歷史紀錄</h3>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th style="width: 15%;">
+                    @Html.DisplayNameFor(model => model.CreateTime)
+                </th>
+                <th style="width: 10%;">
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th style="width: 10%;">
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remark)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @count
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateTime)
+                    </td>
+                    <td>
+                        @Highlight(@item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cost)
+                    </td>
+                    <td>
+                        <div class="AutoSkip" style='width:600px;'>
+                            @Html.DisplayFor(modelItem => item.Remark)
+                        </div>
+                    </td>
+                </tr>
+                count++;
+            }
+        </table>
+    </div>
+</div>
+
+@helper Highlight(AccountingTypeEnum type)
+{
+var textStle = AccountingTypeEnum.Income == type ? "text-info" : "text-danger";
+    <span class="@textStle">@type.GetDisplayName()</span>
+}

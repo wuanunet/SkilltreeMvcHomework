@@ -186,6 +186,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Backend\BackendAreaRegistration.cs" />
+    <Compile Include="Areas\Backend\Controllers\AccountingBookController.cs" />
+    <Compile Include="Areas\Backend\Controllers\BaseController.cs" />
     <Compile Include="Attributes\DateTimeRangeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountingController.cs" />
@@ -238,6 +240,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Backend\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Backend\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Backend\Views\AccountingBook\Manage.cshtml" />
+    <Content Include="Areas\Backend\Views\Shared\_NavigationBar.cshtml" />
+    <Content Include="Areas\Backend\Views\AccountingBook\History.cshtml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
@@ -296,9 +303,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Backend\Controllers\" />
     <Folder Include="Areas\Backend\Models\" />
-    <Folder Include="Areas\Backend\Views\Shared\" />
     <Folder Include="Views\Feed\" />
   </ItemGroup>
   <ItemGroup>
