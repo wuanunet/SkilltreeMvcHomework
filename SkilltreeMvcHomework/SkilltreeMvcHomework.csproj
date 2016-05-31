@@ -221,6 +221,9 @@
     <Compile Include="ViewModels\AccountingViewModel.cs" />
     <Compile Include="ViewModels\AccountingTypeEnum.cs" />
     <Compile Include="ViewModels\IResult.cs" />
+    <Compile Include="ViewModels\PagingOptions.cs" />
+    <Compile Include="ViewModels\QueryOption.cs" />
+    <Compile Include="ViewModels\QueryOptionHtmlExtensions.cs" />
     <Compile Include="ViewModels\Result.cs" />
   </ItemGroup>
   <ItemGroup>
